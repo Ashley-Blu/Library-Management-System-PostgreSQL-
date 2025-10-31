@@ -120,7 +120,6 @@ SELECT \* FROM books WHERE LOWER(title) = LOWER('1984');
 
 ### Get All Books by a Specific Author
 
-sql
 SELECT b.title, a.name
 FROM books b
 JOIN authors a ON b.author_id = a.id
@@ -128,7 +127,6 @@ WHERE LOWER(a.name) = LOWER('George Orwell');
 
 ### Get All Available Books
 
-sql
 SELECT \* FROM books WHERE available = TRUE;
 
 ---
@@ -137,21 +135,18 @@ SELECT \* FROM books WHERE available = TRUE;
 
 ### Mark a Book as Borrowed
 
-sql
 UPDATE books
 SET available = FALSE
 WHERE LOWER(title) = LOWER('1984');
 
 ### Add a New Genre to an Existing Book
 
-sql
 UPDATE books
 SET genres = array_append(genres, 'Classic')
 WHERE LOWER(title) = LOWER('1984');
 
 ### Add a Borrowed Book to a Patron’s Record
 
-sql
 UPDATE patrons
 SET borrowed_books = array_append(borrowed_books, 1)
 WHERE LOWER(name) = LOWER('Alice Johnson');
