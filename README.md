@@ -112,11 +112,11 @@ INSERT INTO patrons (id, name, email, borrowed_books) VALUES
 
 ### Get All Books
 
-SELECT \* FROM books;
+SELECT * FROM books;
 
 ### Get a Book by Title
 
-SELECT \* FROM books WHERE LOWER(title) = LOWER('1984');
+SELECT * FROM books WHERE LOWER(title) = LOWER('1984');
 
 ### Get All Books by a Specific Author
 
@@ -127,7 +127,7 @@ WHERE LOWER(a.name) = LOWER('George Orwell');
 
 ### Get All Available Books
 
-SELECT \* FROM books WHERE available = TRUE;
+SELECT * FROM books WHERE available = TRUE;
 
 ---
 
@@ -169,11 +169,11 @@ DELETE FROM authors WHERE id = 5;
 
 ### Find books published after 1950
 
-SELECT \* FROM books WHERE published_year > 1950;
+SELECT * FROM books WHERE published_year > 1950;
 
 ### Find all American authors
 
-SELECT \* FROM authors WHERE nationality = 'American';
+SELECT * FROM authors WHERE nationality = 'American';
 
 ### Set all books as available
 
@@ -181,11 +181,11 @@ UPDATE books SET available = TRUE;
 
 ### Find books that are available and published after 1950
 
-SELECT \* FROM books WHERE available = TRUE AND published_year > 1950;
+SELECT * FROM books WHERE available = TRUE AND published_year > 1950;
 
 ### Find authors whose names contain 'George'
 
-SELECT \* FROM authors WHERE name ILIKE '%George%';
+SELECT * FROM authors WHERE name ILIKE '%George%';
 
 ### Increment published year 1869 by 1
 
